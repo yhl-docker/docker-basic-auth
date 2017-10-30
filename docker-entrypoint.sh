@@ -14,3 +14,5 @@ else
 fi
 
 /usr/bin/htpasswd -cb /etc/nginx/conf.d/htpasswd $HTTP_AUTH_USER $HTTP_AUTH_PWD
+
+exec "$@"
