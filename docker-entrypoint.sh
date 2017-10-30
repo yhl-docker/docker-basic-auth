@@ -4,11 +4,12 @@
 if [ $HTTP_AUTH_USER ]; then
     echo $HTTP_AUTH_USER
 else
-    echo "HTTP_AUTH_USER IS NOT EXISTS"
+    HTTP_AUTH_USER=root
 fi
 
 if [ $HTTP_AUTH_PWD ]; then
     echo $HTTP_AUTH_PWD
 else
-    echo "HTTP_AUTH_PWD IS NOT EXISTS"
+    HTTP_AUTH_PWD=root
 fi
+

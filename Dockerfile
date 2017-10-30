@@ -1,5 +1,9 @@
 FROM nginx
 
 COPY docker-entrypoint.sh /usr/local/bin/
-RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+COPY conf.d/* /etc/nginx/conf.d/
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh && \
+    apt-get update && \
+    apt-get install apache2-utils && \
+    rm -rf /var/lib/apt/lists/*
 # ENTRYPOINT ["docker-entrypoint.sh"]
