@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+# set -e
 
 if [ $HTTP_AUTH_USER ]; then
     echo $HTTP_AUTH_USER
