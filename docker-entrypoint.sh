@@ -1,5 +1,5 @@
 #!/bin/bash
-# set -e
+set -euo pipefail
 
 if [ $HTTP_AUTH_USER ]; then
     echo $HTTP_AUTH_USER
@@ -15,4 +15,4 @@ fi
 
 /usr/bin/htpasswd -cb /etc/nginx/conf.d/htpasswd $HTTP_AUTH_USER $HTTP_AUTH_PWD
 
-# exec "$@"
+exec "$@"
