@@ -1,5 +1,10 @@
 #!/bin/bash
 set -euo pipefail
 
-echo $HTTP_AUTH_USER;
-echo $HTTP_AUTH_PWD;
+if [ ! $HTTP_AUTH_USER ]; then
+    echo $HTTP_AUTH_USER
+fi
+
+if [ ! $HTTP_AUTH_PWD ]; then
+    echo $HTTP_AUTH_PWD
+fi
