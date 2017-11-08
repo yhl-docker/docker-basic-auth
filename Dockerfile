@@ -5,3 +5,4 @@ COPY conf.d/* /etc/nginx/conf.d/
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 ENTRYPOINT ["docker-entrypoint.sh"]
+CMD ["nginx", "-g", "daemon off;"]
